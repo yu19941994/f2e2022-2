@@ -1,0 +1,60 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 67px;
+    padding: 17.5px 16px;
+    background-color: $light;
+    @include midphone() {
+        padding: 17.5px 32px;
+    }
+    > div {
+        display: flex;
+        align-items: center;
+        > h1 {
+            font-family: 'Noto Sans TC';
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 1.4;
+            color: $primary;
+            letter-spacing: 0.64px;
+            @include midphone() {
+                font-size: 14px;
+            }
+            @include pc() {
+                font-family: 'Noto Sans';
+            }
+        }
+    }
+
+    &__logo {
+        width: 24px;
+        height: 24px;
+        margin-right: 13px;
+    }
+
+    &__avatar {
+        display: block;
+        width: 32px;
+        height: 32px;
+        margin-right: 12px;
+        border-radius: 999rem;
+        background-color: $primary;
+
+        @include midphone() {
+            background-color: #30D79B;
+        }
+
+        @include pc() {
+            background-color: $primary;
+        }
+    }
+
+    &__user > p {
+        font-family: 'Noto Sans';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        color: $dark;
+    }
+}

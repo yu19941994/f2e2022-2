@@ -1,0 +1,132 @@
+.container {
+    padding: 32px 0px 16px;
+    background-color: $secondary;
+
+    @include midphone() {
+        padding: 32px 44px 16px;
+    }
+
+    @include pc() {
+        padding: 32px 86px 428px;
+    }
+
+    &__upload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        background-color: $light;
+        @include midphone() {
+            border-radius: 24px;
+        }
+    }
+
+    &__upload--place {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 91.466667%;
+        height: 268px;
+        border: 4px dashed $dark-10;
+        border-radius: 16px;
+
+        @include midphone() {
+            width: 90.574374%;
+            height: 236px;
+        }
+
+        @include pc() {
+            width: 94.952681%;
+            height: 236px;
+        }
+
+        > h2 {
+            margin-bottom: 12px;
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.2;
+
+            @include midphone() {
+                font-size: 24px;
+                line-height: 35px;
+            }
+
+            @include pc() {
+                font-size: 32px;
+                line-height: 46px;
+            }
+        }
+
+        > p {
+            font-family: 'Noto Sans TC';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $dark-60;
+
+            @include pc() {
+                font-size: 16px;
+                line-height: 23px;
+            }
+        }
+    }
+
+    &__upload--button {
+        position: relative;
+        width: 188px;
+        height: 40px;
+        margin-bottom: 12px;
+        padding: 8px 32px;
+        border: none;
+        border-radius: 16px;
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $light;
+        text-align: right;
+        background-color: $primary;
+        box-shadow: 0px 4px 4px rgba(142, 141, 208, .6);
+
+        @include midphone() {
+            width: 200px;
+            height: 41px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        @include pc() {
+            width: 236px;
+            height: 53px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+    }
+
+    &__upload--button::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        // bottom: 0px;
+        // right: 0px;
+        left: 32px;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icon_cloud.svg');
+
+        @include pc() {
+            top: 13px;
+        }
+    }
+
+    &__upload--button:hover {
+        background-color: $primaryHover;
+    }
+
+    &__upload--button:active {
+        background-color: $primaryPressed;
+    }
+}
