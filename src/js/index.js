@@ -1,6 +1,12 @@
 import '../scss/all.scss';
 import './all';
 import '../index.html';
+import '../sign.html';
 import "@babel/polyfill";
 import '../images/logo.png';
+import '../images/img_upload.png';
+import '../images/img_write.png';
+import '../images/img_check.png';
+import '../images/pdf.png';
 import '../images/icon_cloud.svg';
+import '../images/icon_menu.svg';

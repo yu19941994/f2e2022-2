@@ -20,12 +20,50 @@
     </header>
     <section class="container">
         <div class="container__upload">
-            <div class="container__upload--place">
+            <label class="container__upload--place">
                 <h2>開始簽署你的文件吧！</h2>
+                <input type="file" type="file" accept="application/pdf">
                 <button type="button" class="container__upload--button">上傳簽署檔案</button>
                 <p>或直接拖放檔案進來</p>
-            </div>
+            </label>
+        </div>
+        <div class="container__pdfList">
+            <ul>
+                <li>
+                    <div>
+                        <img src="./images/pdf.png" alt="pdf image">
+                        <div>
+                            <h4>01點點簽合約說明書.pdf</h4>
+                            <span>簽署時間：2022</span>
+                        </div>
+                    </div>
+                    <img src="./images/icon_menu.svg" alt="icon menu">
+                </li>
+            </ul>
+        </div>
+        <div class="container__direction">
+            <h3>快速操作</h3>
+            <ul>
+                <li>
+                    <img src="./images/img_upload.png" alt="upload image">
+                    <p>上傳簽署檔案</p>
+                    <span>創建文件只需不到一分鐘的時間</span>
+                </li>
+                <li>
+                    <img src="./images/img_write.png" alt="write image">
+                    <p>進行簽署</p>
+                    <span>建立自己的簽名，不需掃描線上簽！</span>
+                </li>
+                <li>
+                    <img src="./images/img_check.png" alt="check image">
+                    <p>簽署完成</p>
+                    <span>文件簽名完成立即使用！</span>
+                </li>
+            </ul>
         </div>
     </section>
+    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="./js/index.js"></script>
 </body>
 </html>
