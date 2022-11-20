@@ -1,0 +1,148 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+    display: none;
+    height: 355px;
+    width: 100vw;
+    border-radius: 12px;
+    background-color: $light;
+    box-shadow: 0px 8px 16px rgba(142, 141, 208, .12);
+    transform: translate(-50%, -50%);
+
+    @include midphone() {
+        width: 500px;
+        height: 363px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 13px 24px;
+        border: 1px solid $dark-10;
+        > h2 {
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.4;
+            color: #000;
+
+            @include midphone() {
+                font-size: 18px;
+                line-height: 26px;
+            }
+        }
+        > img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__body {
+        padding: 24px;
+    }
+    &__sign {
+        width: 100%;
+        height: 190px;
+        background-color: $dark-10;
+        border-radius: 12px;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 24px;
+        border-top: 1px solid $dark-10;
+        > div {
+            display: flex;
+            align-items: center;
+        }
+        > div > a {
+            margin-right: 24px;
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.4;
+            color: $primary;
+            text-decoration: none;
+
+            @include pc() {
+               font-size: 18px;
+                line-height: 26px; 
+            }
+        }
+        > div > ul {
+            display: flex;
+            align-items: center;
+        }
+
+        > div > ul > li:not(:nth-of-type(3)) {
+            margin-right: 24px;
+        }
+
+        > div > ul > li > a > span {
+            display: block;
+            width: 24px;
+            height: 24px;
+            border-radius: 999rem;
+        }
+
+        > div > ul > li:nth-of-type(1) > a > span {
+            background-color: #006BFF;
+        }
+
+        > div > ul > li:nth-of-type(2) > a > span {
+            background-color: #FF0000;
+        }
+
+        > div > ul > li:nth-of-type(3) > a > span {
+            background-color: #000;
+        }
+
+        > div > ul > li > a.active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border: 2px solid $primary;
+            border-radius: 999rem;
+            // background-color: $primary;
+        }
+    }
+
+    &__save {
+        padding: 8px 32px;
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $light;
+        background-color: $primary;
+        border-radius: 12px;
+
+        @include midphone() {
+            font-size: 18px;
+            line-height: 26px;
+        }
+        @include pc() {
+            line-height: 1.4;
+        }
+    }
+}
+
+.modalBackdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 500;
+    display: none;
+    width: 100vw;
+    height: calc(100vh + 92px);
+    background-color: $dark;
+    opacity: .5;
+}

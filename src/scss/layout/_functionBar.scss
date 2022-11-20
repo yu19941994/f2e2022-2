@@ -1,0 +1,125 @@
+.functionBar {
+    position: fixed;
+    bottom: 0;
+    z-index: 100;
+    width: 100vw;
+    padding: 22.41px 76.5px;
+    background-color: $light;
+
+    @include midphone() {
+        padding: 0;
+        background-color: $dark-90;
+    }
+    @include pc() {
+        top: 67px;
+        left: 0;
+        width: 112px;
+    }
+
+    > ul {
+        display: flex;
+        justify-content: space-between;
+
+        @include midphone() {
+            justify-content: none;
+            width: 50%;
+        }
+        @include pc() {
+            flex-direction: column;
+            width: 100%;
+        }
+    }
+
+    > ul > li {
+        @include midphone() {
+            width: 33.33%;
+        }
+        @include pc() {
+            width: auto;
+            height: 137px;
+        }
+    }
+
+    > ul > li > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-decoration: none;
+
+        @include midphone() {
+            flex-direction: row;
+            padding: 37px 16px;
+        }
+
+        @include pc() {
+            flex-direction: column;
+            padding: 41.89px 32px;
+        }
+    }
+
+    > ul > li > a.active {
+        > p {
+            color: $primary;
+            @include midphone() {
+                color: $light;
+            }
+        }
+    }
+
+    > ul > li > a > img {
+        width: 24px;
+        height: 24px;
+        margin-bottom: 4px;
+        @include midphone() {
+            // margin-right: 13.33px;
+            margin-bottom: 0;
+        }
+        @include pc() {
+            // margin-right: 0px;
+            margin-bottom: 4px;
+        }
+    }
+
+    > ul > li > a > img:nth-of-type(2) {
+        display: none;
+    }
+
+    > ul > li > a > img:nth-of-type(3) {
+        display: none;
+    }
+
+    > ul > li > a.active {
+        @include midphone() {
+            background-color: $dark-80;
+        }
+        > img:nth-of-type(1) {
+            display: none;
+        }
+        > img:nth-of-type(2) {
+            display: none;
+        }
+        > img:nth-of-type(3) {
+            display: block;
+        }
+        @include midphone() {
+            > img:nth-of-type(1) {
+                display: none;
+            }
+            > img:nth-of-type(2) {
+                display: block;
+            }
+            > img:nth-of-type(3) {
+                display: none;
+            }
+        }
+    }
+
+    > ul > li > a > p {
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $dark-70;
+    }
+}

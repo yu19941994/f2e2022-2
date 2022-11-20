@@ -1,0 +1,29 @@
+@mixin smallphone {
+    @media (min-width: 376px) {
+        @content;
+    }
+}
+
+@mixin midphone {
+    @media (min-width: 585px) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media (min-width: 766px) {
+        @content;
+    }
+}
+
+@mixin pc {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin largepc {
+    @media (min-width: 1339px) {
+        @content;
+    }
+}

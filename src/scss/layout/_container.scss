@@ -1,0 +1,300 @@
+.container {
+    padding: 32px 0px 16px;
+    background-color: $secondary;
+
+    @include midphone() {
+        padding: 32px 44px 16px;
+    }
+
+    @include pc() {
+        padding: 32px 86px 428px;
+    }
+
+    &__upload {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        margin-bottom: 16px;
+        background-color: $light;
+        @include midphone() {
+            border-radius: 24px;
+        }
+        @include pc() {
+            margin-bottom: 32px;
+        }
+    }
+
+    &__upload--place {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 91.466667%;
+        height: 268px;
+        border: 4px dashed $dark-10;
+        border-radius: 16px;
+
+        @include midphone() {
+            width: 90.574374%;
+            height: 236px;
+        }
+
+        @include pc() {
+            width: 94.952681%;
+            height: 236px;
+        }
+
+        > h2 {
+            margin-bottom: 12px;
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.2;
+
+            @include midphone() {
+                font-size: 24px;
+                line-height: 35px;
+            }
+
+            @include pc() {
+                font-size: 32px;
+                line-height: 46px;
+            }
+        }
+
+        > p {
+            font-family: 'Noto Sans TC';
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: $dark-60;
+
+            @include pc() {
+                font-size: 16px;
+                line-height: 23px;
+            }
+        }
+
+        > input {
+            position: absolute;
+            z-index: 1;
+            width: 188px;
+            opacity: 0;
+            overflow: hidden;
+
+            @include midphone() {
+                width: 200px;
+            }
+            @include pc() {
+                width: 236px;
+            }
+        }
+    }
+
+    &__upload--button {
+        position: relative;
+        width: 188px;
+        height: 40px;
+        margin-bottom: 12px;
+        padding: 8px 32px;
+        border: none;
+        border-radius: 16px;
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $light;
+        text-align: right;
+        background-color: $primary;
+        box-shadow: 0px 4px 4px rgba(142, 141, 208, .6);
+
+        @include midphone() {
+            width: 200px;
+            height: 41px;
+            font-size: 18px;
+            line-height: 1.4;
+        }
+
+        @include pc() {
+            width: 236px;
+            height: 53px;
+            font-size: 24px;
+            line-height: 1.2;
+        }
+    }
+
+    &__upload--button::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        // bottom: 0px;
+        // right: 0px;
+        left: 32px;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+        background-image: url('../images/icon_cloud.svg');
+
+        @include pc() {
+            top: 13px;
+        }
+    }
+
+    &__upload--button:hover {
+        background-color: $primaryHover;
+    }
+
+    &__upload--button:active {
+        background-color: $primaryPressed;
+    }
+
+    &__pdfList {
+        margin-bottom: 16px;
+        > ul > li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 24px;
+            background: $light;
+
+            @include midphone() {
+                border-radius: 12px;
+                box-shadow: 0px 8px 16px ruba(142, 141, 208, .12);
+            }
+        }
+
+        > ul > li > a {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        > ul > li > a > img {
+            width: 68px;
+            margin-right: 12px;
+        }
+
+        > ul > li > a > div > h4 {
+            margin-bottom: 4px;
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 1.4;
+            color: $dark;
+
+            @include midphone() {
+                font-size: 24px;
+                line-height: 1.2;
+            }
+        }
+
+        > ul > li > a > div > span {
+            margin-bottom: 4px;
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.4;
+            color: $dark-60;
+
+            @include midphone() {
+                font-size: 16px;
+            }
+        }
+
+        > ul > li > img {
+            width: 24px;
+            height: 24px;
+        }
+    }
+
+    &__direction {
+        padding: 26.5px 16px 81px;
+        background: $light;
+
+        @include midphone() {
+            border-radius: 24px;
+            box-shadow: 0px 8px 16px rgba(142, 141, 208, .12);
+        }
+
+        > h3 {
+            margin-bottom: 12px;
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.2;
+            color: $dark;
+
+            @include midphone() {
+                font-size: 18px;
+                line-height: 26px;
+            }
+            @include pc() {
+                font-size: 24px;
+                line-height: 1.2;
+            }
+        }
+        > ul {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            @include pc() {
+                flex-direction: row;
+                justify-content: space-evenly;
+            }
+        }
+
+        > ul > li {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 16px;
+
+            @include midphone() {
+                margin-bottom: 32px;
+            }
+
+            @include pc() {
+                margin-bottom: 0;
+            }
+        }
+
+        > ul > li > img {
+            width: 215px;
+
+            @include midphone() {
+                width: 224px;
+            }
+        }
+
+        > ul > li > p {
+            margin-bottom: 4px;
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 1.2;
+            color: $dark-80;
+
+            @include midphone() {
+                font-size: 18px;
+                line-height: 26px;
+            }
+
+            @include pc() {
+                font-size: 24px;
+                line-height: 1.2;
+            }
+        }
+
+        > ul > li > span {
+            font-family: 'Noto Sans TC';
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: $dark-60;
+        }
+    }
+}

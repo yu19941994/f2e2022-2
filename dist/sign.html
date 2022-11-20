@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="short icon" href="favicon.ico">
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <header class="signNavbar">
+        <a href="javascript:history.back()">
+            <img src="./images/icon_home.svg" alt="icon home">
+        </a>
+        <a href="javascript:history.back()" type="button" class="signNavbar__back">回首頁</a>
+        <div>
+            <div>
+                <h1>點點簽合約說明書</h1>
+                <img src="./images/icon_edit.svg" alt="icon edit">
+            </div>
+            <span>.pdf</span>
+        </div>
+        <button type="button" class="signNavbar__complete">完成</button>
+    </header>
+    <section class="pdfCanvas">
+        <!-- <img src="" alt="" class="pdfCanvas__img"> -->
+        <canvas id="pdfCanvas__img" class="pdfCanvas__img">
+            <!-- <img src="" alt="" class="pdfCanvas__img"> -->
+        </canvas>
+    </section>
+    <div class="signBarTop">
+        <img src="./images/icon_down.svg" alt="icon down">
+        <img src="./images/icon_left.svg" alt="icon left">
+    </div>
+    <div class="signBar">
+        <img src="" class="signBar__img"></img>
+        <button type="button" id="signBar__button">建立手寫簽名</button>
+    </div>
+    <nav class="functionBar">
+        <ul>
+            <li>
+                <a href="javascript:void(0)" class="active">
+                    <img src="./images/icon_editing.svg" alt="icon editing">
+                    <img src="./images/icon_editing_white.svg" alt="icon editing">
+                    <img src="./images/icon_editing_primary.svg" alt="icon editing">
+                    <p>簽名</p>
+                </a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">
+                    <img src="./images/icon_img.svg" alt="icon image">
+                    <img src="./images/icon_img_white.svg" alt="icon image">
+                    <img src="./images/icon_img_primary.svg" alt="icon image">
+                    <p>圖片</p>
+                </a>
+            </li>
+            <li>
+               <a href="javascript:void(0)">
+                    <img src="./images/icon_shortcut.svg" alt="icon shortcut">
+                    <img src="./images/icon_shortcut_white.svg" alt="icon shortcut">
+                    <img src="./images/icon_shortcut_primary.svg" alt="icon shortcut">
+                    <p>縮圖</p>
+               </a>
+            </li>
+        </ul>
+    </nav>
+    <div class="modalBackdrop" id="modalBackdrop">
+    </div>
+    <div class="modal" id="modal">
+        <div class="modal__header">
+            <h2>建立手寫簽名</h2>
+            <img src="./images/icon_close.svg" alt="icon close" id="modal__close">
+        </div>
+        <div class="modal__body">
+            <div class="modal__sign">
+                <canvas id="modal__canvas" width="452" height="190" style="border: 1px solid #000">
+                </canvas>
+            </div>
+        </div>
+        <div class="modal__footer">
+            <div>
+                <a href="javascript: void(0);" id="modal__clear">清除</a>
+                <ul class="modal__color">
+                    <li>
+                        <a href="javascript: void(0);">
+                            <span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);">
+                            <span></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript: void(0);" class="active">
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <button type="button" class="modal__save">儲存</button>
+        </div>
+    </div>
+    <script src="https://unpkg.com/fabric@latest/dist/fabric.js"></script>
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js"></script>
+    <script src="./js/index.js" type="text/javascript"></script>
+</body>
+</html>

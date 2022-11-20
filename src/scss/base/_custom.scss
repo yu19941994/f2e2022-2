@@ -1,0 +1,20 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+a {
+    cursor: pointer;
+}
+
+html,
+body {
+    background-color: $secondary;
+    overflow-x: hidden;
+}
+
