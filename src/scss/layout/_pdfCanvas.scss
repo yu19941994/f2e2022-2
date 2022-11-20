@@ -1,0 +1,28 @@
+.pdfCanvas {
+    height: calc(100vh + 92px);
+    padding: 79px 0px 12px;
+    background: $secondary;
+
+    @include midphone() {
+        padding: 80px 44px 13px;
+    }
+
+    @include pc() {
+        padding: 101px 86px 34px 493px;
+    }
+
+    &__img {
+        width: 100vw;
+        // height: calc(0.7066508313539193 * 100vw);
+        // height: 100%;
+        // height: 25vw;
+        // height: 100%;
+        @include midphone() {
+            width: calc(100vw - 88px);
+        }
+
+        @include pc() {
+            width: calc(100vw - 579px);
+        }
+    }
+}

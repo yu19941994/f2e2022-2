@@ -165,17 +165,19 @@
             }
         }
 
-        > ul > li > div {
+        > ul > li > a {
             display: flex;
             align-items: center;
+            width: 100%;
+            text-decoration: none;
         }
 
-        > ul > li > div > img {
+        > ul > li > a > img {
             width: 68px;
             margin-right: 12px;
         }
 
-        > ul > li > div > div > h4 {
+        > ul > li > a > div > h4 {
             margin-bottom: 4px;
             font-family: 'Noto Sans TC';
             font-weight: 500;
@@ -189,7 +191,7 @@
             }
         }
 
-        > ul > li > div > div > span {
+        > ul > li > a > div > span {
             margin-bottom: 4px;
             font-family: 'Noto Sans TC';
             font-weight: 500;

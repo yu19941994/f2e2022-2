@@ -1,0 +1,130 @@
+.signNavbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 67px;
+    padding: 17.5px 16px;
+    background-color: $light;
+
+    @include midphone() {
+        padding: 17.5px 32px;
+    }
+
+    > a {
+        text-decoration: none;
+    }
+
+    > a:nth-of-type(1) {
+        @include midphone() {
+            display: none;
+        }
+    }
+
+    > a > img {
+        width: 24px;
+        height: 24px;
+    }
+
+    > div {
+        text-align: center;
+        @include midphone() {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    > div > div {
+        display: flex;
+        align-items: center;
+    }
+
+    > div > div > img {
+        width: 16px;
+        height: 16px;
+        @include midphone() {
+            margin-right: 8.41px;
+        }
+    }
+
+    > div > div > h1 {
+        margin-right: 8px;
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $dark;
+
+        @include midphone() {
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        @include pc() {
+            font-size: 24px;
+            line-height: 1.2;
+        }
+    }
+
+    > div > span {
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 1.2;
+        color: $dark-40;
+    }
+
+    &__back {
+        display: none;
+        padding: 8px 16px;
+        border: 1px solid $primary;
+        border-radius: 16px;
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: $primary;
+        background-color: $light;
+        @include midphone() {
+            display: block;
+        }
+    }
+
+    &__back:hover {
+        background-color: $third;
+    }
+
+    &__back:active {
+        background-color: $thirdOutline;
+    }
+
+    &__complete {
+        padding: 8px 16px;
+        border: none;
+        border-radius: 16px;
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.2;
+        color: $light;
+        background-color: $primary;
+
+        @include midphone() {
+            padding: 8px 32px;
+        }
+
+        @include pc() {
+            font-size: 18px;
+            line-height: 1.4;
+        }
+    }
+
+    &__complete:hover {
+        background-color: $primaryHover;
+    }
+
+    &__complete:active {
+        background-color: $primaryPressed;
+    }
+}

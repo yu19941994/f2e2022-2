@@ -1,0 +1,119 @@
+.signBar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 92px;
+    height: 209px;
+    background-color: $dark-80;
+
+    @include midphone() {
+        height: 328px;
+    }
+
+    @include pc() {
+        top: 67px;
+        left: 112px;
+        bottom: 0;
+        width: 295px;
+        height: 100vh;
+    }
+   
+
+    > button {
+        position: absolute;
+        left: 50%;
+        bottom: 17px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        width: calc(100% - 32px);
+        border: none;
+        border-radius: 20px;
+        box-shadow: 0px 4px 4px rgba(42, 43, 46, .25);
+        font-family: 'Noto Sans TC';
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        color: $light;
+        background-color: $primary;
+        transform: translateX(-50%);
+
+        @include midphone() {
+            bottom: 32px;
+            width: calc(100% - 90px);
+        }
+
+        @include pc() {
+            top: 32px;
+            bottom: auto;
+            width: calc(100% - 86px);
+            font-size: 24px;
+        }
+    }
+
+    &__img {
+        display: none;
+        width: 154px;
+        height: 93px;
+        margin-top: 22.5px;
+        margin-left: 21px;
+        border-radius: 8px;
+        background-color: $light;
+
+        @include midphone() {
+            width: 316px;
+            height: 194px;
+        }
+
+        @include pc() {
+            width: 239px;
+            height: 146px;
+            margin-top: 105px
+        }
+    }
+}
+
+.signBarTop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 300px;
+    z-index: 2;
+    height: 24px;
+    background-color: $dark-80;
+    border-radius: 32px 32px 0px 0px;
+    @include midphone() {
+        left: 50%;
+        width: 50%;
+        bottom: 419px;
+        transform: translateX(-50%);
+    }
+    @include pc() {
+        top: 30%;
+        left: 407px;
+        width: 24px;
+        height: 320px;
+        border-radius: 0px 32px 32px 0px;
+    }
+    > img {
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    > img:nth-of-type(1) {
+        @include pc() {
+            display: none;
+        }
+    }
+
+    > img:nth-of-type(2) {
+        display: none;
+        @include pc() {
+            display: block;
+            top: 50%;
+            // transform: translateY(-50%);
+        }
+    }
+
+}
