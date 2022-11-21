@@ -66,8 +66,8 @@ if (!window.location.href.includes('/sign.html')) {
 
         canvas.requestRenderAll();
         const pdfData = await printPDF(e.target.files[0]);
-        const pdfImage = await pdfToImage(pdfData);
-        console.log(pdfImage);
+        // const pdfImage = await pdfToImage(pdfData);
+        // console.log(pdfImage);
 
         localStorage.setItem('pdfData', pdfData.toDataURL());
         const date = `${new Date().getFullYear()}.${new Date().getMonth()+1}.${new Date().getDate()}`;
@@ -86,8 +86,8 @@ if (!window.location.href.includes('/sign.html')) {
             </ul>
         `;
         console.log(pdfData);
-        console.log(pdfImage);
-        canvas.setBackgroundImage(pdfImage, canvas.renderAll.bind(canvas));
+        // console.log(pdfImage);
+        // canvas.setBackgroundImage(pdfImage, canvas.renderAll.bind(canvas));
     })
 } else {
 
@@ -100,8 +100,8 @@ if (!window.location.href.includes('/sign.html')) {
     async function render(data) {
         console.log(data);
         canvas.requestRenderAll();
-        const pdfImage = await pdfToImage(data);
-        console.log(pdfImage);
+        // const pdfImage = await pdfToImage(data);
+        // console.log(pdfImage);
         let myCanvas = document.getElementById("pdfCanvas__img");
         // var myCanvas = document.getElementById('pdfCanvas__canvas');
         let ctx = myCanvas.getContext('2d');
@@ -119,7 +119,7 @@ if (!window.location.href.includes('/sign.html')) {
         imgInner.setAttribute('src', data);
         
 
-        canvas.setBackgroundImage(pdfImage, canvas.renderAll.bind(canvas));
+        // canvas.setBackgroundImage(pdfImage, canvas.renderAll.bind(canvas));
 
         const pdf = new jsPDF();
         const download = document.querySelector(".signNavbar__complete");
