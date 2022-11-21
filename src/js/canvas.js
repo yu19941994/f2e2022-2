@@ -100,10 +100,9 @@ if (window.location.href.includes('/sign.html')) {
         // showImage.style.display = 'block';
         const newImg = canvas.toDataURL("image/png");
         localStorage.setItem('img', newImg);
-        showImage.src = localStorage.getItem("img");
         modal.style.display = 'none';
         modalBackdrop.style.display = 'none';
-
+		showImage.src = localStorage.getItem("img");
     }
 
     modalSave.addEventListener("click", saveImage);

@@ -32,10 +32,8 @@ async function printPDF(pdfData) {
 
   // 設定 PDF 所要顯示的寬高及渲染
   canvas.height = viewport.height;
-//   canvas.height = '97px';
   canvas.width = viewport.width;
   console.log((viewport.width / viewport.height));
-//   canvas.width = '68px';
   const renderContext = {
     canvasContext: context,
     viewport,
@@ -66,8 +64,6 @@ if (!window.location.href.includes('/sign.html')) {
 
         canvas.requestRenderAll();
         const pdfData = await printPDF(e.target.files[0]);
-        // const pdfImage = await pdfToImage(pdfData);
-        // console.log(pdfImage);
 
         localStorage.setItem('pdfData', pdfData.toDataURL());
         const date = `${new Date().getFullYear()}.${new Date().getMonth()+1}.${new Date().getDate()}`;
